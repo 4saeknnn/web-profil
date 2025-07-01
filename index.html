@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Saya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Website Profil Saya</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('tentang')">Tentang</a></li>
+        <li><a href="#" onclick="showSection('motivasi')">Motivasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tentang">
+      <h2>Tentang</h2>
+      <div class="photo">
+        <img src="bob.jpeg" alt="Foto Profil">
+      </div>
+      <p><strong>Nama:</strong> Habiburrahman</p>
+      <p><strong>Alamat:</strong> Banguntapan</p>
+      <p><strong>Asal:</strong> Aceh singkil</p>
+      <p><strong>Tanggal Lahir:</strong> 24 Januari 2005</p>
+    </section>
+
+    <section id="motivasi" style="display: none;">
+      <h2>Motivasi</h2>
+      <p>
+        Apapun yang terjadi pulanglah sebagai sarjana!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bob</p>
+  </footer>
+
+  <script>
+    function showSection(section) {
+      document.getElementById('tentang').style.display = section === 'tentang' ? 'block' : 'none';
+      document.getElementById('motivasi').style.display = section === 'motivasi' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
